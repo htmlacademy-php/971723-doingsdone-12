@@ -78,5 +78,10 @@ $content = include_template('main.php', ['projects' => $projects, 'tasks' => $ta
 $page = include_template('layout.php', ['title' => $title, 'username' => $username, 'content' => $content]);
 
 print($page);
+
+function esc($str) {
+ $text = htmlspecialchars($str);
+ return $text;
+}
 ?>
 
